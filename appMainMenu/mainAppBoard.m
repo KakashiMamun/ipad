@@ -57,7 +57,13 @@
     navController.navigationBarHidden = YES;
     navController.view.frame = mainboardView.bounds;
     clientInfoTable.view.frame = navController.view.bounds;
-    [self.mainboardView addSubview:navController.view];
+    
+    [UIView animateWithDuration:0.5 delay:0.3 options:UIViewAnimationCurveEaseIn animations:^{
+        
+        [self.mainboardView addSubview:navController.view];
+    }
+                     completion:NULL];
+    //[self.mainboardView addSubview:navController.view];
 }
 
 -(void)freeAllViewControllers{
